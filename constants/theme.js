@@ -14,28 +14,23 @@ const COLORS = {
   cardBackground : "#1B1A1A",
 
   white: "#FFFFFF",
-  lightWhite: "#FAFAFC",
-  
-  linearGradient :{
-    default: "linear-gradient(direction, #FB9505, #FC0076)",
-    right: "linear-gradient(to right, #FB9505, #FC0076)",    
-  }
+  lightWhite: "#FAFAFC"  
 }
   
-const FONT = {
-  dmRegular: "DMRegular",
-  dmMedium: "DMMedium",
-  dmBold: "DMBold",
-  SatochiRegular: "STRegular"
+const FONT = {  
+  SatochiRegular: "Satoshi-Regular",
 };
   
 const SIZES = {
   xSmall: 10,
   small: 12,
-  medium: 16,
+  xxMedium:14,
+  xMedium: 16,
+  medium :18,
   large: 20,
   xLarge: 24,
   xxLarge: 32,
+  button: 300
 };
   
 const SHADOWS = {
@@ -58,6 +53,16 @@ const SHADOWS = {
     shadowOpacity: 0.25,
     shadowRadius: 5.84,
     elevation: 5,
+  },
+  smallPrimary: {
+    shadowColor: COLORS.primary,
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 2,
   },
 };
 
