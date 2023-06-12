@@ -4,38 +4,26 @@ import { COLORS, FONT, SIZES } from "../../../constants";
 
 const styles = StyleSheet.create({
      containerLinear:{
-        flex: 1.0,
+        flex: 1.0,               
+        margin: 1,        
+        borderRadius: 10,
+        alignItems: 'center',
         justifyContent: 'center',
-        alignContent: 'center',
-        backgroundColor: COLORS.background1        
+        backgroundColor: COLORS.background1,
+        cursor: 'text'
        
     },
-    grediant: {
-               
-        justifyContent: 'center',
-        alignSelf: 'center', 
-        borderRadius: 8
-    },
-    buttonContainer:{
-        flex: 1.0,
-        alignSelf: 'center',
-        justifyContent: 'center',
-        backgroundColor: COLORS.background1, 
-        width :'97%',
-        marginTop: '2%', 
-        marginBottom: '2%',
-        borderRadius: 8,
+    grediant: {  
         alignItems: 'center',
-        
+        justifyContent: 'center',
+        borderRadius: 10,
     },
-    buttonText: {
+    styledText: {
         fontSize: SIZES.xxLarge,
         textAlign: 'center',
-        color: COLORS.primary,
-        marginHorizontal: 3,
-        
+        color: COLORS.primary,    
+        paddingHorizontal:5,         
     }
-
 });
 
 export default styles;

@@ -4,8 +4,11 @@ import styles from './screenHeaderIcon.style';
 
 const ScreenHeaderIcon = ({iconUrl, dimension, handlePress}) => {
   return (
-    <TouchableOpacity>
-        <Image source={iconUrl}/>
+    <TouchableOpacity style={styles.btnContainer}>
+        <Image source={iconUrl}
+          resizeMode='cover'
+          style={styles.btnImg(dimension)}
+        />
     </TouchableOpacity>
   )
 }

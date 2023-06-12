@@ -5,8 +5,7 @@ import * as SplashScreen from 'expo-splash-screen';
 
 SplashScreen.preventAutoHideAsync();
 
-const Layout= ()=>{
-    
+const Layout= ()=>{    
     const [fontsLoaded] = useFonts({
         SatoshiRegular: require('../assets/fonts/Satoshi-Regular.ttf'),
         SatoshiBold: require('../assets/fonts/Satoshi-Bold.ttf'),
@@ -23,10 +22,10 @@ const Layout= ()=>{
         return null;
       }
     
-    
     return(
-        <Stack onLoyout = {onLayoutRootView}/>
+        <Stack onLayout = {onLayoutRootView}/>
     );
 }
+
 
 export default Layout;
