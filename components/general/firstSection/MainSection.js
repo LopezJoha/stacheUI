@@ -5,6 +5,7 @@ import HeadingText from '../../home/main/HeadingText';
 import styles from './MainSection.style';
 import StyledButton from '../StyledButton';
 import GeneralText from '../generalText';
+import { images } from '../../../constants';
 
 const MainSection = (props) => {
   return (
@@ -13,8 +14,8 @@ const MainSection = (props) => {
                          lettering = <Lettering textLettering = "smart accounts"/> 
                          afterLettering  = "you never knew existed..."                                        
             />
-        <GeneralText text= "But they're the key to unlocking the true potential of crypto and NFTs. and we're bulding Solanas's first one Stache."/> 
-         <StyledButton buttonText = 'Prueba con Imagen' image =<Image source={icons.chevronLeft} style ={{height: 15, width: 15}}/>/>
+        <GeneralText text= "With Solana's high-performance blockchain, our Smart Account system is democratizing crypto, giving you capabilities once exclusive to industry giants."/> 
+         <StyledButton buttonText = 'Prueba con Imagen' image =<Image source={images.discord} style ={{height: 30, width: 30}}/>/>
         <StyledButton buttonText = 'Prueba sin Imagen'/>                    
     </View>
   )

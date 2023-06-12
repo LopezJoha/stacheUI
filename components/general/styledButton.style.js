@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     borderStyle :'solid',
     borderRadius: 12,
     alignItems: "center",
-    minWidth: 120,
+    minWidth: 140,
     maxWidth: 170,
     minHeight: 48
     },

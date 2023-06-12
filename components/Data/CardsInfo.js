@@ -1,7 +1,7 @@
 export const CardsInfo = [
     {
         id:1,
-        cardlName: "01",
+        cardName: '01',
         src: require('../../assets/images/ex-1.png'),
         previewText: "Your assets. Your rules.",
         title: "You're in control." , 
@@ -20,25 +20,22 @@ export const CardsInfo = [
         subtitle: `Bank accounts do more than just hold money.
         They can do things like handle subscriptions, pay bills, and interact with
         other services... all without you having to lift a finger.
-        Isn't it about time crypto caught up?
-`
-          
+        Isn't it about time crypto caught up?`          
     },
     {
         id:3,
-        cardlName: "03",
+        cardName: '03',
         src: require('../../assets/images/ex-3.png'),
         previewText: "Web3 as it should be.",
         title: "Power to the people.", 
         subtitle: `Driven by a strong dedication to preserving the fundamental principles 
         of cryptocurrency like self-sovereignty, self-custody and decentralization, Stache is about
-        empowering the individual through technology.
-        This is the power of Stache.`
+        empowering the individual through technology.This is the power of Stache.`
         
     },
     {
         id:4,
-        cardlName: "04",
+        cardName: '04',
         src: require('../../assets/images/logoBig.png'),
         previewText: "It's about to get wild.",
         title: "Stache has capabilities that you've never seen, guaranteed." , 

@@ -1,43 +1,27 @@
-import React, { useState } from 'react';
-import { TouchableOpacity, View, Text, Image, StyleSheet } from 'react-native';
-import styles from './Card.style';
 
-const  Card = (props) => {
+import { TouchableOpacity, View, Text, Image, StyleSheet } from 'react-native';
+import { COLORS, SIZES, SHADOWS } from "../../../constants";
+
+
+const  Card = (props) => {  
   
   const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-    text: {
+    container: {      
+      
+    },     
+    text:{
       fontSize: 24,
-      color: props.isPress ? 'red' : 'blue',
-    },
-    button: {
-      backgroundColor: props.isPress ? 'blue' : 'red',
-      padding: 10,
-      borderRadius: 5,
-      marginTop: 20,
-    },
-    buttonText: {
-      color: 'white',
-      fontSize: 18,
-    },
+      color: 'white'
+    }  
   });
 
   return (
-    <TouchableOpacity style={styles.container} onPress = {props.funcion} >
-      <Text style={styles.text}>
-      {props.number}
-      </Text>
-     <View>
-        
-     <Text style={styles.tex}>
-        {props.text}
-        </Text>
-        <Text></Text>
-     </View>     
+    <TouchableOpacity style={props.style} onPress={props.onPress} >
+      <View >      
+        <Text style={styles.text}>{props.number}</Text>           
+        <Text style={styles.text} >{props.text}</Text>
+      </View>
+       
     </TouchableOpacity>
   );
 }
