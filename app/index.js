@@ -8,7 +8,7 @@ import ScreenHeaderIcon from '../components/home/header/ScreenHeaderIcon';
 import StyledButton from '../components/general/StyledButton';
 import CardsList from '../components/general/thirdSection/CardsList';
 import { CardsInfo } from '../components/Data/CardsInfo';
-
+import MainSection from '../components/general/firstSection/MainSection';
 
 const Home= ()=>{
     const router = useRouter();
@@ -22,7 +22,7 @@ const Home= ()=>{
 
         
     const renderHeaderLeft = () => (
-        <View style={{ paddingLeft: '50%', paddingTop: 50 }}>
+        <View style={{ paddingLeft: '25%', paddingTop: 50 }}>
             <ScreenHeaderIcon iconUrl={images.logo}/>
         </View>
       );
@@ -60,7 +60,7 @@ const Home= ()=>{
       const textStyle = active ? styles.text1 : styles.text2;
 
     return(
-      <SafeAreaView style={{flex: 1, backgroundColor: COLORS.background1, padding: '5%'}}>
+      <SafeAreaView style={{flex: 1, backgroundColor: COLORS.background1, paddingHorizontal: '2.5%'}}>
         <Stack.Screen
           options={{                
               headerStyle : {
@@ -75,17 +75,11 @@ const Home= ()=>{
             
         <ScrollView showsHorizontalScrollIndicator={false}> 
         {// Esto es el cuerpo de la app
-        }        
-          <HeadingText beforeLettering = "Why do you need a"  
-                      lettering = <Lettering textLettering = "marketplace"/> 
-                      afterLettering  = "to sell your NFTs?"                                        
-          />
-          <HeadingText beforeLettering = "For"  
-                      lettering = <Lettering textLettering = "example"/>                                                                 
-          />
-          <HeadingText beforeLettering = "Example without Lettering"                                                             
-          />
+        }
 
+        <MainSection />        
+          
+          
           <CardsList 
               onPressCard={handlePressCard} 
               active={active} 
