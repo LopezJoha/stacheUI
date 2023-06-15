@@ -1,11 +1,12 @@
 import { TouchableOpacity, View, Text, Image, StyleSheet } from 'react-native';
 import Card from '../../home/main/Card';
+import { CardsInfo } from '../../../components/Data/CardsInfo';
 
 const  CardsList = (props) => { 
   
   return (
     <View style = {styles.containerList}>
-        {props.info.map((card)=>(
+        {CardsInfo.map((card)=>(
             <Card 
                 key = {card.id}
                 id = {card.id}

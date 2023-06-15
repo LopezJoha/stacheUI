@@ -4,14 +4,13 @@ import { COLORS, FONT, SIZES } from "../../../constants";
 
 const styles = StyleSheet.create({
     container: {
-        width: "100%",
-        
+        width: "100%",        
     },
     title: {
         fontFamily: 'SatoshiRegular',
         fontSize: SIZES.xxLarge,
-        color: COLORS.text2,
-        letterSpacing: 2
+        color: COLORS.text2,      
+        
     }, 
     subtitle: {
         fontFamily: 'SatoshiRegular',

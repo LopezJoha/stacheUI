@@ -5,14 +5,13 @@ import styles from '../main/headingText.style';
 import { COLORS } from '../../../constants';
 
 
-
-const HeadingText=props=>{
+const HeadingText=(props)=>{
     const router = useRouter(props);
     return(
         <View style={styles.container}>
-           <Text style= {styles.title}>
+           <Text style= {[styles.title, {textAlign:props.align}]}>
             {props.beforeLettering}
-            {props.lettering}
+            {props.differentText}
             {props.afterLettering}
            </Text>     
         </View>

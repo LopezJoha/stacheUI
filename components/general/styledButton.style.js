@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     paddingVertical: '1.0%',
     borderWidth: 1,
     borderStyle :'solid',
-    borderRadius: 12,
+    borderRadius: 15,
     alignItems: "center",
     minWidth: 140,
     maxWidth: 170,
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
   }),
   btnText: {
     color: COLORS.primary,
-    fontSize: SIZES.small,
+    fontSize: SIZES.xMedium,
     paddingHorizontal: '0.5%',
   },
   

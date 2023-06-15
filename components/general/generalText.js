@@ -6,7 +6,7 @@ import styles from './generalText.style';
 
 const  GeneralText = (props) => {
   return (
-    <View style= {styles.textContainer}>
+    <View style= {[styles.textContainer, {textAlign:props.align}]}>
         <Text style={styles.text}>{props.text}</Text>
     </View>   
 

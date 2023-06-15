@@ -1,14 +1,12 @@
 import { useState } from 'react';
-import { View, Text, Image, ScrollView, SafeAreaView, StyleSheet} from 'react-native';
+import { View, Text, Image, ScrollView, SafeAreaView, StyleSheet, ImageBackground} from 'react-native';
 import { Stack, useRouter} from 'expo-router';
 import { COLORS, icons, images, SIZES } from '../constants';
-import Lettering  from '../components/home/main/lettering';
-import HeadingText from '../components/home/main/HeadingText';
 import ScreenHeaderIcon from '../components/home/header/ScreenHeaderIcon';
 import StyledButton from '../components/general/StyledButton';
 import CardsList from '../components/general/thirdSection/CardsList';
-import { CardsInfo } from '../components/Data/CardsInfo';
 import MainSection from '../components/general/firstSection/MainSection';
+const backgroundImg = {uri: '../assets/images/introBg.png'};
 
 const Home= ()=>{
     const router = useRouter();
@@ -22,13 +20,13 @@ const Home= ()=>{
 
         
     const renderHeaderLeft = () => (
-        <View style={{ paddingLeft: '25%', paddingTop: 50 }}>
+        <View style={{ paddingLeft: '25%', paddingTop: 70 }}>
             <ScreenHeaderIcon iconUrl={images.logo}/>
         </View>
       );
           
       const renderHeaderRight = () => (
-        <View style={{ paddingRight: '5%', paddingTop: 50 }}>
+        <View style={{ paddingRight: '3%', paddingTop: '7%' }}>
           <StyledButton buttonText = 'Launch Stache'/>
         </View>
       );
@@ -60,11 +58,13 @@ const Home= ()=>{
       const textStyle = active ? styles.text1 : styles.text2;
 
     return(
-      <SafeAreaView style={{flex: 1, backgroundColor: COLORS.background1, paddingHorizontal: '2.5%'}}>
+      <SafeAreaView style={{flex: 1, backgroundColor: COLORS.background1, }}>
         <Stack.Screen
           options={{                
               headerStyle : {
-                backgroundColor: COLORS.background1,                  
+                backgroundColor: COLORS.background1,
+                height:100, 
+                                          
                 },
               headerShadowVisible: false, 
               headerLeft : renderHeaderLeft,
@@ -76,20 +76,18 @@ const Home= ()=>{
         <ScrollView showsHorizontalScrollIndicator={false}> 
         {// Esto es el cuerpo de la app
         }
-
-        <MainSection />        
+        <MainSection /> 
+        
+               
           
-          
+        <View style={{paddingTop:300}}>
           <CardsList 
-              onPressCard={handlePressCard} 
-              active={active} 
-              info={CardsInfo} 
-              textStyle={textStyle}
+              onPressCard={handlePressCard}                        
               activeCardId={active}
               activeCard={styles.activeCard} 
               inactiveCard={styles.inactiveCard}
               />
-
+          </View>  
         </ScrollView>
       </SafeAreaView>
         
