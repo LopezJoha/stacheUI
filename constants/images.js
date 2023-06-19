@@ -9,7 +9,7 @@ import linesFaq from "../assets/images/linesFaq.png";
 import logo from "../assets/images/logo.png";
 import logoBig from "../assets/images/logoBig.png";
 import why from "../assets/images/why.png";
-
+import why2 from "../assets/images/why2.png";
 
 
 export default{
@@ -23,5 +23,6 @@ export default{
   linesFaq,
   logo,
   logoBig,
-  why
+  why,
+  why2
 };

@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignContent: 'center',
-    backgroundColor: COLORS.background1,
+    backgroundColor: COLORS.buttonBackground,
     borderColor: COLORS.primary,
     padding: '0.5%',
     paddingVertical: '1.0%',
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     minWidth: 140,
     maxWidth: 170,
-    minHeight: 48
+    minHeight: 45
     },
   btnImg: (dimension) => ({
     width: dimension,
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
   }),
   btnText: {
     color: COLORS.primary,
-    fontSize: SIZES.xMedium,
+    fontSize: SIZES.xxMedium,
     paddingHorizontal: '0.5%',
   },
   

@@ -14,12 +14,12 @@ const texto = "With Solana's high-performance blockchain, our Smart Account syst
 const MainSection = (props) => {
     
   return (
-    <View style={[styles.container, {}]}> 
+    <View style={[styles.container, {'@media and(min-width: 768)':{backgroundColor:'red'}}]}> 
       <ImageBackground source={images.introBg} resizeMode="center" style={{flex: 1, marginBottom:300}}>        
       </ImageBackground> 
             
       <View style={[styles.box, {paddingLeft:'2.5%'}]}>
-          <View style={[styles.inner, {justifyContent: 'flex-start', gap:'5%', marginTop:'-10%'}]}>
+          <View style={[styles.inner, {justifyContent:'flex-start', gap:'5%', }]}>
             <View>
               <HeadingText beforeLettering = "Uncover the power of"  
                                 differentText = <GradientText textGradient=" smart accounts "/> 
@@ -27,7 +27,7 @@ const MainSection = (props) => {
                                 align = 'auto'                            
                 />
             </View>
-            <View style={{paddingTop: 30,marginLeft: 130, width: '120%', marginBottom:'3%'}}>
+            <View style={{paddingTop: 30,marginLeft: 130, width: '120%',}}>
                 <GeneralText text= {texto} align = 'left'/> 
               </View> 
               <View style={styles.calltheAction}>
@@ -43,30 +43,25 @@ const MainSection = (props) => {
           </View>                                   
       </View>
 
-      <View style={styles.box}>
+      <View style={[styles.box, {paddingTop:30}]}>
         <View style={[styles.inner,{},]}>
-          <Image source={images.intro}  style={[]}></Image>
+          <Image source={images.intro}  style={[{paddingTop:200}]}></Image>
         </View>                      
       </View> 
 
-      <View style={styles.faqContainer}>
-        <View style={styles.faqContainerInner}>
-          <View style={styles.faqButton}>
-            <TouchableOpacity>
-              <Text>FAQ</Text>
-            </TouchableOpacity>
-          </View>
-          <View style={styles.faqButton}>
-            <TouchableOpacity>  
-              <Text>Join Discord</Text>        
-            </TouchableOpacity>
-          </View>
+      <View style={styles.containerFAQ}>
+        <View style={styles.buttonContainer}>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.textFAQ}>FAQ</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.textFAQ}>Join Discord</Text>
+          </TouchableOpacity>
         </View>
-        
-      </View>
-      
+      </View>         
 
   </View>  
+  
   )
 }
 

@@ -10,8 +10,12 @@ const COLORS = {
   gray: "#C1C0C8",
   background1: "#212121",
   background2: "#1E1E1E",
+  background3: '#282828',
   darkBackground : "#1B1B1B",
   cardBackground : "#1B1A1A",
+  buttonBackground: '#121212bf',
+  buttonBorder: '#666666',
+  buttonText: '#8e8e8e',
 
   white: "#FFFFFF",
   lightWhite: "#FAFAFC"  
