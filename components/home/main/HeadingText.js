@@ -8,8 +8,8 @@ import { COLORS } from '../../../constants';
 const HeadingText=(props)=>{
     const router = useRouter(props);
     return(
-        <View style={styles.container}>
-           <Text style= {[styles.title, {textAlign:props.align}]}>
+        <View style={[styles.container, props.moreStyles]}>
+           <Text style= {[styles.title, {textAlign:props.align, fontSize: props.size}]}>
             {props.beforeLettering}
             {props.differentText}
             {props.afterLettering}

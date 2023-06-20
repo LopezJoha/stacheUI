@@ -1,20 +1,20 @@
 import { TouchableOpacity, View, Text, Image, StyleSheet } from 'react-native';
 import Card from '../../home/main/Card';
 import { CardsInfo } from '../../../components/Data/CardsInfo';
+import { COLORS } from '../../../constants';
 
 const  CardsList = (props) => { 
-  
-  return (
+  return(
     <View style = {styles.containerList}>
         {CardsInfo.map((card)=>(
             <Card 
-                key = {card.id}
-                id = {card.id}
-                number = {card.cardName}
-                text ={card.previewText}
-                onPress = {()=>props.onPressCard(card.id)}
-                style = {card.id === props.activeCardId? props.activeCard : props.inactiveCard }
-                />
+              key = {card.id}
+              id = {card.id}
+              number = {card.cardName}
+              text ={card.previewText}
+              onPress = {()=>props.onPressCard(card.id)}
+              style = {card.id === props.activeCardId ? props.activeCard : props.inactiveCard }
+            />
         ))}
     </View>
   );

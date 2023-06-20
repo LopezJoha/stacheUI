@@ -6,17 +6,13 @@ import ScreenHeaderIcon from '../components/home/header/ScreenHeaderIcon';
 import StyledButton from '../components/general/StyledButton';
 import MainSection from '../components/general/firstSection/MainSection';
 import SecondSection from '../components/general/secondSection/SecondSection';
+import ThirdSection from '../components/general/thirdSection/ThirdSection';
+
 
 const Home= ()=>{
-    const router = useRouter();
-    const [active, setActive] = useState(1);  
-
-    function handlePressCard(id){
-      setActive(id);          
-      console.log(active + " active  ");
-    }
+    const router = useRouter();    
     
-        
+            
     const renderHeaderLeft = () => (
         <View style={{ paddingLeft: '25%', paddingTop: 70 }}>
             <ScreenHeaderIcon iconUrl={images.logo}/>
@@ -47,11 +43,9 @@ const Home= ()=>{
         />        
             
         <ScrollView showsHorizontalScrollIndicator={false}>         
-        <MainSection /> 
-        <SecondSection/>
-               
-          
-         
+          <MainSection/> 
+          <SecondSection/>
+          <ThirdSection/>
         </ScrollView>
       </SafeAreaView>
         

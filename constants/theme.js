@@ -33,8 +33,8 @@ const SIZES = {
   medium :18,
   large: 30,
   xLarge: 32,
-  xxLarge: 56,
- 
+  xxLarge: 50,
+  xxxLarge: 54 
 };
   
 const SHADOWS = {

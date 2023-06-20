@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontFamily: 'SatoshiRegular',
-        fontSize: SIZES.xxLarge,
+        fontSize: SIZES.xxxLarge,
         color: COLORS.text2,      
         
     }, 
