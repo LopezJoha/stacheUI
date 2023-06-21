@@ -3,19 +3,15 @@ import { ImageBackground, TouchableOpacity, Text, Image, View, TextInput, StyleS
 import { SIZES, COLORS } from '../../../constants';
 import HeadingText from '../../home/main/HeadingText';
 import GeneralText from '../generalText';
-import Lettering from '../../home/main/lettering';
 import GradientText from '../../home/main/GradientText';
 import CardsList from './CardsList';
 const subtitle = "Stache is a smart account that acts like an agent on your behalf. Being programmable and \n on-chain means your Stache can do things that your wallet can't. Directly selling your NFTs \n is just the beginning..."
              
-const ThirdSection = (props) => {   
+const ThirdSection = () => {   
   const [active, setActive] = useState(1);  
        
     function handlePressCard(id){
-      console.log(id)   
-      setActive(id);  
-      console.log(id)        
-      console.log(active + " active  ");
+      setActive(id);        
     }
   
     return (   
@@ -36,6 +32,7 @@ const ThirdSection = (props) => {
               activeCardId={active}                      
               activeCard = {styles.activeCard}
               inactiveCard = {styles.inactiveCard}
+              
             /> }
         </View>   
       </View>
@@ -50,31 +47,47 @@ const styles = StyleSheet.create({
   containerText:{
     maxWidth: '65%',
     alignSelf:'center',
+    gap:'12%', 
+    paddingBottom:'5%'
   }, 
   cardListContainer:{
-    paddingHorizontal:'5%'
+    paddingHorizontal:'2.5%',
+    
   },
   activeCard :  {
-    flex: 1,
+    fontFamily: 'SatoshiRegular',
+    backgroundColor: COLORS.cardBackground,
+    flex: 3,
     flexDirection: 'column',
     margin: 10,
     justifyContent: 'center',
     alignItems: 'center',      
-    borderWidth: 4, 
+    borderWidth: 2, 
     borderColor: COLORS.primary,
-    width: 700      
+    borderRadius:20,
+    minHeight: 400      
     
   },
   inactiveCard : {
+    backgroundColor: COLORS.cardBackground,
     flex: 1,
     flexDirection: 'column',
     margin: 10,
     justifyContent: 'center',
     alignItems: 'center',      
     borderWidth: 2, 
-    borderColor: COLORS.secondary,
-    maxWidth: 200
+    borderColor: COLORS.buttonBorder,
+    borderRadius:20,
+    minHeight: 400
   },
+  showImgContainer:{
+    flex: 1,
+    height: '100%',
+    width: '98%',
+  }, 
+  hideImgContainer:{
+  display: 'none',
+  }
 });
 
 export default ThirdSection;

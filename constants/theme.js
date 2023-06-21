@@ -28,9 +28,10 @@ const FONT = {
 const SIZES = {
   xSmall: 10,
   small: 12,
-  xxMedium:14,
-  xMedium: 16,
-  medium :18,
+  xMedium:14,
+  xxMedium: 16,
+  xxxMedium :18,
+  medium: 22,
   large: 30,
   xLarge: 32,
   xxLarge: 50,

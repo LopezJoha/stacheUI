@@ -12,8 +12,11 @@ const  CardsList = (props) => {
               id = {card.id}
               number = {card.cardName}
               text ={card.previewText}
+              image = {card.src}
               onPress = {()=>props.onPressCard(card.id)}
               style = {card.id === props.activeCardId ? props.activeCard : props.inactiveCard }
+              activeCard = {props.activeCardId}
+              styleImgContainer= {card.id === props.activeCardId ? props.showImgContainer : props.hideImgContainer}
             />
         ))}
     </View>
@@ -22,10 +25,12 @@ const  CardsList = (props) => {
 
 const styles = StyleSheet.create({
     containerList: {
-    flex: 1,
+    backgroundColor: COLORS.background3,
     justifyContent: 'center',
     alignItems: 'center',
-    flexDirection: 'row',    
+    flexDirection: 'row', 
+    gap:15, 
+    paddingTop: '5%'   
     }
 
 });

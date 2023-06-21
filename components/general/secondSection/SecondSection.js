@@ -57,8 +57,7 @@ const styles = StyleSheet.create({
     maxWidth: '65%',
     position:'absolute',
     top: '15%',
-    alignSelf:'center',
-    
+    alignSelf:'center',    
     
   },
   imageBackground: {

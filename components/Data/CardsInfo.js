@@ -2,8 +2,8 @@ export const CardsInfo = [
     {
         id:1,
         cardName: '01',
-        src: require('../../assets/images/ex-1.png'),
-        previewText: "Your assets. Your rules.",
+        src: 'url(../../assets/images/ex-1.png)',
+        previewText: 'Your assets. Your rules.',
         title: "You're in control." , 
         subtitle: `As a set of on-chain programs, Stache is governed by code,
         and that code is completely controlled by you.
@@ -14,7 +14,7 @@ export const CardsInfo = [
     {
         id:2,
         cardName: '02',
-        src: require('../../assets/images/ex-2.png'),
+        src: 'url(../../assets/images/ex-2.png)',
         previewText:"It's sort of like...",
         title: "A bank account.", 
         subtitle: `Bank accounts do more than just hold money.
@@ -25,7 +25,7 @@ export const CardsInfo = [
     {
         id:3,
         cardName: '03',
-        src: require('../../assets/images/ex-3.png'),
+        src: 'url(../../assets/images/ex-3.png)',
         previewText: "Web3 as it should be.",
         title: "Power to the people.", 
         subtitle: `Driven by a strong dedication to preserving the fundamental principles 
@@ -36,7 +36,7 @@ export const CardsInfo = [
     {
         id:4,
         cardName: '04',
-        src: require('../../assets/images/logoBig.png'),
+        src: 'url(../../assets/images/logoBig.png)',
         previewText: "It's about to get wild.",
         title: "Stache has capabilities that you've never seen, guaranteed." , 
         subtitle: "Discover new possibilities and come join us for the ride!"
