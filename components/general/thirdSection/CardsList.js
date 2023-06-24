@@ -2,10 +2,12 @@ import { TouchableOpacity, View, Text, Image, StyleSheet } from 'react-native';
 import Card from '../../home/main/Card';
 import { CardsInfo } from '../../../components/Data/CardsInfo';
 import { COLORS } from '../../../constants';
+import { LinearGradient } from 'expo-linear-gradient';
 
 const  CardsList = (props) => { 
   return(
-    <View style = {styles.containerList}>
+    <View style = {styles.containerList}>    
+        
         {CardsInfo.map((card)=>(
             <Card 
               key = {card.id}
@@ -13,12 +15,15 @@ const  CardsList = (props) => {
               number = {card.cardName}
               text ={card.previewText}
               image = {card.src}
+              title ={card.title}
+              subtitle = {card.subtitle}
               onPress = {()=>props.onPressCard(card.id)}
-              style = {card.id === props.activeCardId ? props.activeCard : props.inactiveCard }
               activeCard = {props.activeCardId}
-              styleImgContainer= {card.id === props.activeCardId ? props.showImgContainer : props.hideImgContainer}
+              
             />
+          
         ))}
+  
     </View>
   );
 }
@@ -31,7 +36,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row', 
     gap:15, 
     paddingTop: '5%'   
-    }
+    },
+    grediant:{     
+      borderRadius: 20,
+     
+   },
 
 });
 

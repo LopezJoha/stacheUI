@@ -34,7 +34,7 @@ const SecondSection = (props) => {
                       size = {SIZES.xxLarge}
 
                       beforeLettering = "For example, "  
-                      differentText=<Lettering textLettering=' why '/>
+                      differentText=<Lettering textLettering='why'/>
                       afterLettering  = " do you need a marketplace to sell your NFTs?"                                        
           />
           <GeneralText align='center'
