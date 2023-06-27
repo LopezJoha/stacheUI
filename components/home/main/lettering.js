@@ -14,8 +14,8 @@ const Lettering=props=>{
             style={styles.grediant}
         >
           <TouchableOpacity
-            style={styles.containerLinear}>
-            <Text style={styles.styledText}>{props.textLettering}</Text>     
+            style={[styles.containerLinear, {width:props.width}]}>
+            <Text style={[styles.styledText, {fontSize: props.size, padding:props.padding, margin: props.margin}]}>{props.textLettering}</Text>     
 
           </TouchableOpacity>
         </LinearGradient>

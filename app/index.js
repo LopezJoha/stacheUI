@@ -7,12 +7,10 @@ import StyledButton from '../components/general/StyledButton';
 import MainSection from '../components/general/firstSection/MainSection';
 import SecondSection from '../components/general/secondSection/SecondSection';
 import ThirdSection from '../components/general/thirdSection/ThirdSection';
-
+import FourthSection from '../components/general/fourthSection/FourtSection';
 
 const Home= ()=>{
-    const router = useRouter();    
-    
-            
+    const router = useRouter();
     const renderHeaderLeft = () => (
         <View style={{ paddingLeft: '25%', paddingTop: 70 }}>
             <ScreenHeaderIcon iconUrl={images.logo}/>
@@ -46,6 +44,8 @@ const Home= ()=>{
           <MainSection/> 
           <SecondSection/>
           <ThirdSection/>
+          <FourthSection/>
+          
         </ScrollView>
       </SafeAreaView>
         

@@ -2,10 +2,13 @@ import { TouchableOpacity, View, Text, Image, StyleSheet } from 'react-native';
 import Card from '../../home/main/Card';
 import { CardsInfo } from '../../../components/Data/CardsInfo';
 import { COLORS } from '../../../constants';
-import { LinearGradient } from 'expo-linear-gradient';
+import { TextInput } from 'react-native-gesture-handler';
+import StyledButton from '../StyledButton';
+
 
 const  CardsList = (props) => { 
   return(
+  <View style={styles.container}>
     <View style = {styles.containerList}>    
         
         {CardsInfo.map((card)=>(
@@ -19,28 +22,63 @@ const  CardsList = (props) => {
               subtitle = {card.subtitle}
               onPress = {()=>props.onPressCard(card.id)}
               activeCard = {props.activeCardId}
-              
+              callAction = {card.id === 4 && props.activeCardId === 4 ? 
+              <View style={styles.calltheAction}>        
+                <TextInput
+                  style={styles.input}
+                  placeholder="Enter your email"
+                  placeholderTextColor="#888"
+                  onChangeText={props.setTextI}
+                  value={props.textI}
+                />
+                <StyledButton buttonText = 'Join the waitlist'/>
+                </View>
+              : null }
             />
           
+          
         ))}
+
   
     </View>
+    
+</View>  
+
   );
 }
 
 const styles = StyleSheet.create({
-    containerList: {
-    backgroundColor: COLORS.background3,
+  container:{
+    flexDirection: 'column'
+  },
+  containerList: {
+    backgroundColor: COLORS.background1,
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row', 
-    gap:15, 
-    paddingTop: '5%'   
-    },
-    grediant:{     
-      borderRadius: 20,
-     
-   },
+    gap:15,   
+  },
+  calltheAction:{
+    width:'100%',
+    paddingVertical:'10%',
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems:'center',
+    gap:15
+    
+  },
+  input:{
+    width: '70%',  
+     height: 45,
+     backgroundColor: COLORS.buttonBackground,
+     opacity:1,
+     borderWidth: 0.5,
+     borderColor: COLORS.buttonBorder,
+     borderRadius: 15,
+     paddingLeft: '5%', 
+   },  
+      
 
 });
 

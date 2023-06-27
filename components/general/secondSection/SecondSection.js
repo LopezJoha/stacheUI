@@ -21,7 +21,7 @@ const SecondSection = (props) => {
         <View style={styles.overlayContainer}>
           <View style={styles.absoluteContainer}>
             <LinearGradient
-              colors={['rgba(40, 40, 40, 0.1)', 'rgba(40, 40, 40, 1)', 'rgba(40, 40, 40, 1)']}
+              colors={['rgba(28, 28, 28, 0.1)', 'rgba(28, 28, 28, 1)', 'rgba(21, 21, 21, 0.3)']}
               start={{x:0, y:0}}
               end={{x: 0, y: 1}}
               style={styles.gradient}

@@ -3,8 +3,8 @@ import { StyleSheet } from "react-native";
 import { COLORS, SIZES, SHADOWS } from "../../constants";
 
 const styles = StyleSheet.create({
-  btnContainer: {   
-    display: 'flex',
+  btnContainer: {  
+    display:'flex',
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignContent: 'center',

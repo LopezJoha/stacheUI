@@ -1,12 +1,15 @@
 import React, { useState} from 'react';
-import { ImageBackground, TouchableOpacity, Text, Image, View, TextInput, StyleSheet } from 'react-native';
+import { ImageBackground, TouchableOpacity, Text, Image, View, TextInput, StyleSheet,} from 'react-native';
 import { SIZES, COLORS } from '../../../constants';
 import HeadingText from '../../home/main/HeadingText';
 import GeneralText from '../generalText';
 import GradientText from '../../home/main/GradientText';
 import CardsList from './CardsList';
 const subtitle = "Stache is a smart account that acts like an agent on your behalf. Being programmable and \n on-chain means your Stache can do things that your wallet can't. Directly selling your NFTs \n is just the beginning..."
-             
+import { LinearGradient } from 'expo-linear-gradient';
+
+const miniButtons = [1, 2, 3, 4];
+
 const ThirdSection = () => {   
   const [active, setActive] = useState(1);  
        
@@ -26,22 +29,36 @@ const ThirdSection = () => {
               <GeneralText align='center'
                            text={subtitle} />
           </View> 
-        <View style={styles.cardListContainer}>
-        {<CardsList 
-              onPressCard={handlePressCard}                        
-              activeCardId={active}                     
-              
-              
-            /> }
-        </View>   
+          <View style={styles.cardListContainer}>
+            {<CardsList 
+                  onPressCard={handlePressCard}                        
+                  activeCardId={active}   
+                
+                /> }
+          </View>
+          <View style={styles.buttons}>
+            <View style={[styles.innerButtons]}>
+              {miniButtons.map((index)=>(
+                <LinearGradient
+                  colors={[active === index ? COLORS.primary : COLORS.buttonBorder,
+                          active === index ? COLORS.secondary : COLORS.buttonBorder]}                  
+                  style={[styles.general,{flex: active === index ? 3 : .3, } ]}
+              >
+                <TouchableOpacity style={{width:'100%', height:'100%', borderRadius:50}} onPress={()=>handlePressCard(index)}/>
+              </LinearGradient>  
+              ))}   
+          </View>
+        </View>
       </View>
     );
 }
 
 const styles = StyleSheet.create({    
   container:{
-    backgroundColor: COLORS.background3,     
-    height: '150%'
+    backgroundColor: COLORS.background1,
+    alignContent: 'center', 
+    justifyContent: 'center',
+              
   },
   containerText:{
     maxWidth: '65%',
@@ -50,36 +67,27 @@ const styles = StyleSheet.create({
     paddingBottom:'5%'
   }, 
   cardListContainer:{
-    paddingHorizontal:'2.5%',
+    paddingHorizontal:'2.5%', 
     
   },
-  activeCard :  {
-    fontFamily: 'SatoshiRegular',
-    backgroundColor: COLORS.cardBackground,
-    flex: 5,
-    flexDirection: 'column',
-    margin: 10,
-    justifyContent: 'center',
-    alignItems: 'center',      
-    borderWidth: 2, 
-    //borderColor: COLORS.primary,
-    borderRadius:20,
-    minHeight: 450   
-    
-  },
-  inactiveCard : {
-    backgroundColor: COLORS.cardBackground,
+  buttons:{
     flex: 1,
-    flexDirection: 'column',
-    margin: 5,
     justifyContent: 'center',
-    alignItems: 'center',      
-    borderWidth: 2, 
-    borderColor: COLORS.buttonBorder,
-    borderRadius:20,
-    minHeight: 450
+    alignItems: 'center',
+    margin:40
   },
-
+  innerButtons:{
+    width:'12%',
+    flexDirection: 'row',
+    gap:10, 
+    paddingHorizontal:'1%'       
+  },
+  general:{
+    minHeight: 10, 
+    minWidth: 10,
+    borderRadius:30,        
+  }
+  
 });
 
 export default ThirdSection;

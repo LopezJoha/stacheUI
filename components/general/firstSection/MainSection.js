@@ -38,7 +38,9 @@ const MainSection = (props) => {
                   onChangeText={props.setTextI}
                   value={props.textI}
                 />
-                <StyledButton buttonText = 'Join the waitlist'/>
+                <StyledButton buttonText = 'Join the waitlist'
+                              disp = 'flex'
+                />
               </View>           
           </View>                                   
       </View>

@@ -5,9 +5,9 @@ import styles from './styledButton.style';
 
 const StyledButton = (props) => {
   return (
-    <TouchableOpacity style={styles.btnContainer}>
+    <TouchableOpacity style={[styles.btnContainer]}>
         {props.image}
-       <Text style={styles.btnText}>{props.buttonText}</Text>
+       <Text style={[styles.btnText]}>{props.buttonText}</Text>
         
     </TouchableOpacity>
   )
