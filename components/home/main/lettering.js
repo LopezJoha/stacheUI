@@ -11,11 +11,19 @@ const Lettering=props=>{
     return(       
         <LinearGradient
             colors={[COLORS.primary, COLORS.secondary]}
-            style={styles.grediant}
+            style={[styles.grediant, {borderRadius: props.border,}]}
         >
           <TouchableOpacity
-            style={[styles.containerLinear, {width:props.width}]}>
-            <Text style={[styles.styledText, {fontSize: props.size, padding:props.padding, margin: props.margin}]}>{props.textLettering}</Text>     
+            style={[styles.containerLinear, 
+            {width:props.width,
+             backgroundColor:props.bg, 
+             borderRadius: props.border,
+             paddingVertical:props.padH
+              }]}>
+            <Text style={[styles.styledText, 
+            {fontSize: props.size, 
+            padding:props.padding, 
+            }]}>{props.textLettering}</Text>     
 
           </TouchableOpacity>
         </LinearGradient>

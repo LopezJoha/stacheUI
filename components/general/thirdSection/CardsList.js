@@ -23,15 +23,8 @@ const  CardsList = (props) => {
               onPress = {()=>props.onPressCard(card.id)}
               activeCard = {props.activeCardId}
               callAction = {card.id === 4 && props.activeCardId === 4 ? 
-              <View style={styles.calltheAction}>        
-                <TextInput
-                  style={styles.input}
-                  placeholder="Enter your email"
-                  placeholderTextColor="#888"
-                  onChangeText={props.setTextI}
-                  value={props.textI}
-                />
-                <StyledButton buttonText = 'Join the waitlist'/>
+              <View style={styles.calltheAction}>
+                <StyledButton buttonText = 'Launche Stache'/>
                 </View>
               : null }
             />
@@ -63,7 +56,7 @@ const styles = StyleSheet.create({
     paddingVertical:'10%',
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     alignItems:'center',
     gap:15
     

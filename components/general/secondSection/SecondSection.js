@@ -31,10 +31,8 @@ const SecondSection = (props) => {
       </ImageBackground>  
       <View style={styles.containerText}>
           <HeadingText align='center'
-                      size = {SIZES.xxLarge}
-
-                      beforeLettering = "For example, "  
-                      differentText=<Lettering textLettering='why'/>
+                      size = {SIZES.xxxLarge}
+                      differentText=<Lettering textLettering='Why' bg={COLORS.background3}/>
                       afterLettering  = " do you need a marketplace to sell your NFTs?"                                        
           />
           <GeneralText align='center'
@@ -54,7 +52,7 @@ const styles = StyleSheet.create({
     
   },
   containerText:{
-    maxWidth: '65%',
+    maxWidth: '60%',
     position:'absolute',
     top: '15%',
     alignSelf:'center',    

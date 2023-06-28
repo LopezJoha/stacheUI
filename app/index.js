@@ -8,6 +8,7 @@ import MainSection from '../components/general/firstSection/MainSection';
 import SecondSection from '../components/general/secondSection/SecondSection';
 import ThirdSection from '../components/general/thirdSection/ThirdSection';
 import FourthSection from '../components/general/fourthSection/FourtSection';
+import FifthSection from '../components/general/fifthSection/FifthSection';
 
 const Home= ()=>{
     const router = useRouter();
@@ -44,8 +45,8 @@ const Home= ()=>{
           <MainSection/> 
           <SecondSection/>
           <ThirdSection/>
-          <FourthSection/>
-          
+          <FourthSection/>  
+          <FifthSection />        
         </ScrollView>
       </SafeAreaView>
         

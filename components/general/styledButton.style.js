@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.buttonBackground,
     borderColor: COLORS.primary,
     padding: '0.5%',
-    paddingVertical: '1.0%',
+    paddingVertical: '1%',
     borderWidth: 1,
     borderStyle :'solid',
     borderRadius: 15,

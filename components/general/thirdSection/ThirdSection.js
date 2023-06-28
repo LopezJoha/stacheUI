@@ -39,12 +39,12 @@ const ThirdSection = () => {
           <View style={styles.buttons}>
             <View style={[styles.innerButtons]}>
               {miniButtons.map((index)=>(
-                <LinearGradient
+                <LinearGradient key={index}
                   colors={[active === index ? COLORS.primary : COLORS.buttonBorder,
                           active === index ? COLORS.secondary : COLORS.buttonBorder]}                  
                   style={[styles.general,{flex: active === index ? 3 : .3, } ]}
               >
-                <TouchableOpacity style={{width:'100%', height:'100%', borderRadius:50}} onPress={()=>handlePressCard(index)}/>
+                <TouchableOpacity key={index} style={{width:'100%', height:'100%', borderRadius:50}} onPress={()=>handlePressCard(index)}/>
               </LinearGradient>  
               ))}   
           </View>

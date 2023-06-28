@@ -30,8 +30,8 @@ export const CardsInfo = [
         cardName: '04',
         src: 'url(../../assets/images/logoBig.png)',
         previewText: "It's about to get wild.",
-        title: "Stache has capabilities that you've never seen, guaranteed." , 
-        subtitle: "Discover new possibilities and come join us for the ride!"
+        title: "Stache has capabilities that you've never seen, guaranteed. Come join us for the ride!" , 
+        subtitle: ""
     }
     
 ]

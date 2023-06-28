@@ -9,21 +9,21 @@ import { images } from '../../../constants';
 import { heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import GradientText from '../../../components/home/main/GradientText';
 
-const texto = "With Solana's high-performance blockchain, our Smart Account system is democratizing crypto, giving you capabilities once exclusive to industry giants."
+const texto = "Experience the first-ever platform that hands you the reins to your personal NFT shop. Say goodbye to marketplace fees and restrictions. Curate your unique collection and connect directly with buyers for a more social trading experience.."
 
 const MainSection = (props) => {
     
   return (
-    <View style={[styles.container, {'@media and(min-width: 768)':{backgroundColor:'red'}}]}> 
+    <View style={[styles.container,]}> 
       <ImageBackground source={images.introBg} resizeMode="center" style={{flex: 1, marginBottom:300}}>        
       </ImageBackground> 
             
       <View style={[styles.box, {paddingLeft:'2.5%'}]}>
           <View style={[styles.inner, {justifyContent:'flex-start', gap:'5%', }]}>
             <View>
-              <HeadingText beforeLettering = "Uncover the power of"  
-                                differentText = <GradientText textGradient=" smart accounts "/> 
-                                afterLettering  = "you never knew existed..."
+              <HeadingText beforeLettering = "Build Your"  
+                                differentText = <GradientText textGradient=" NFT Empire: "/> 
+                                afterLettering  = "Create, Customize, and Curate"
                                 align = 'auto'                            
                 />
             </View>
@@ -31,14 +31,8 @@ const MainSection = (props) => {
                 <GeneralText text= {texto} align = 'left'/> 
               </View> 
               <View style={styles.calltheAction}>
-                <TextInput
-                  style={styles.input}
-                  placeholder="Enter your email"
-                  placeholderTextColor="#888"
-                  onChangeText={props.setTextI}
-                  value={props.textI}
-                />
-                <StyledButton buttonText = 'Join the waitlist'
+                
+                <StyledButton buttonText = 'Launch Stache'
                               disp = 'flex'
                 />
               </View>           

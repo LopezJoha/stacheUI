@@ -6,9 +6,11 @@ import FaqList from './FaqList';
 const FourthSection =()=>{
     return(
         <View style={styles.container}>
+            <View style={styles.textContainer}>
             <HeadingText align='center'
                             size = {SIZES.xxLarge}                        
                             beforeLettering = "Frequently Asked Question"/>
+            </View>           
             
             <FaqList/>
         </View>
@@ -17,10 +19,13 @@ const FourthSection =()=>{
 
 const styles = StyleSheet.create({
     container:{
-        flex:1,
+       
         backgroundColor: COLORS.background3, 
         flexDirection: 'column', 
         padding: '2.5%'
+    },
+    textContainer:{
+        paddingVertical:'5%'
     }
 })
 
