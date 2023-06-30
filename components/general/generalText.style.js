@@ -10,7 +10,8 @@ const styles = StyleSheet.create({
   text: {
     color: COLORS.white,
     fontSize: SIZES.medium,
-    lineHeight: 30
+    lineHeight: 30,
+    
   },
   
 });

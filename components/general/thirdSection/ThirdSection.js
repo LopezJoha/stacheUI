@@ -8,6 +8,7 @@ import CardsList from './CardsList';
 const subtitle = "Stache is a smart account that acts like an agent on your behalf. Being programmable and \n on-chain means your Stache can do things that your wallet can't. Directly selling your NFTs \n is just the beginning..."
 import { LinearGradient } from 'expo-linear-gradient';
 
+
 const miniButtons = [1, 2, 3, 4];
 
 const ThirdSection = () => {   
@@ -18,7 +19,7 @@ const ThirdSection = () => {
     }
   
     return (   
-        <View style={styles.container}>
+        <View style={styles.container}>        
           <View style={styles.containerText}>
               <HeadingText align='center'
                            size = {SIZES.xxLarge}                        
@@ -80,7 +81,8 @@ const styles = StyleSheet.create({
     width:'12%',
     flexDirection: 'row',
     gap:10, 
-    paddingHorizontal:'1%'       
+    paddingHorizontal:'1%',
+    marginBottom:'5%'       
   },
   general:{
     minHeight: 10, 

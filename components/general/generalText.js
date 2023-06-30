@@ -6,8 +6,8 @@ import styles from './generalText.style';
 
 const  GeneralText = (props) => {
   return (
-    <View style= {[styles.textContainer, {textAlign:props.align, fontSize: props.size}]}>
-        <Text style={styles.text}>{props.text}</Text>
+    <View style= {[styles.textContainer, {textAlign:props.align, }]}>
+        <Text style={[styles.text, {fontSize: props.size, fontWeight: props.fWeight}]}>{props.text}</Text>
     </View>   
 
   )

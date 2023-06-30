@@ -3,12 +3,11 @@ import { ImageBackground, TouchableOpacity, Text, Image, View, StyleSheet } from
 import HeadingText from '../../home/main/HeadingText';
 import Lettering  from '../../home/main/lettering';
 import { COLORS, SIZES, images } from '../../../constants';
-import StyledButton from '../StyledButton';
 import GeneralText from '../generalText';
 import { LinearGradient } from 'expo-linear-gradient';
 
 
-const subtitle = 'Right now, selling NFTs without a marketplace or middleman is practically impossible. If \n crypto is about true ownership, why is something so simple so hard?'
+const subtitle = 'Right now, selling NFTs without a marketplace or middleman is practically impossible. If crypto is about true ownership, why is something so simple so hard?'
 
 const SecondSection = (props) => {
   
@@ -31,36 +30,38 @@ const SecondSection = (props) => {
       </ImageBackground>  
       <View style={styles.containerText}>
           <HeadingText align='center'
-                      size = {SIZES.xxxLarge}
+                      size = {SIZES.xxLarge}
                       differentText=<Lettering textLettering='Why' bg={COLORS.background3}/>
                       afterLettering  = " do you need a marketplace to sell your NFTs?"                                        
           />
+          <View style={styles.generalTextContainer}>
           <GeneralText align='center'
                        text={subtitle}
+                       size = {SIZES.xxxMedium}
           />
+          </View>
       </View>    
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container:{
+  container:{    
     backgroundColor: COLORS.background3, 
     alignContent:'center',
-    justifyContent:'center',
-    paddingTop: '5%'
-    
+    justifyContent:'center',   
   },
   containerText:{
     maxWidth: '60%',
     position:'absolute',
     top: '15%',
-    alignSelf:'center',    
-    
+    alignSelf:'center', 
   },
   imageBackground: {
+    flex:1,
     resizeMode: 'cover',
     justifyContent: 'center',
+    marginTop:'5%'
   },
   imageStyle: {
     opacity: 0.7, // Ajusta la opacidad de la imagen de fondo
@@ -77,11 +78,15 @@ const styles = StyleSheet.create({
    right: 0,
    width:'100%', 
    height:'55%',
-   
   },
   gradient: {
     flex: 1,   
   },
+  generalTextContainer:{
+    paddingVertical:'3%',
+    width:'90%',
+    alignSelf:'center'
+  }
 });
 
 export default SecondSection;

@@ -6,8 +6,8 @@ import StyledButton from '../StyledButton';
 import GeneralText from '../generalText';
 import styles from './MainSection.style';
 import { images } from '../../../constants';
-import { heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import GradientText from '../../../components/home/main/GradientText';
+import { SIZES, COLORS } from '../../../constants';
 
 const texto = "Experience the first-ever platform that hands you the reins to your personal NFT shop. Say goodbye to marketplace fees and restrictions. Curate your unique collection and connect directly with buyers for a more social trading experience.."
 
@@ -15,7 +15,7 @@ const MainSection = (props) => {
     
   return (
     <View style={[styles.container,]}> 
-      <ImageBackground source={images.introBg} resizeMode="center" style={{flex: 1, marginBottom:300}}>        
+      <ImageBackground source={images.introBg} resizeMode="center" style={{flex: 1, marginBottom:200}}>        
       </ImageBackground> 
             
       <View style={[styles.box, {paddingLeft:'2.5%'}]}>
@@ -24,11 +24,12 @@ const MainSection = (props) => {
               <HeadingText beforeLettering = "Build Your"  
                                 differentText = <GradientText textGradient=" NFT Empire: "/> 
                                 afterLettering  = "Create, Customize, and Curate"
-                                align = 'auto'                            
+                                align = 'auto' 
+                                                        
                 />
             </View>
             <View style={{paddingTop: 30,marginLeft: 130, width: '120%',}}>
-                <GeneralText text= {texto} align = 'left'/> 
+                <GeneralText text= {texto} align = 'left'  size = {SIZES.xxxMedium}  fWeight={500}/> 
               </View> 
               <View style={styles.calltheAction}>
                 

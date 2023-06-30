@@ -36,13 +36,18 @@ const FaqList =()=>{
 
 const styles = StyleSheet.create({
     container:{
-
+        backgroundImage:'url(../../../assets/images/linesFaq.png)',
+        backgroundRepeat:'no-repeat',
+        backgroundPosition: 'right',
+        backgroundSize:'center',         
+        paddingVertical:'10%'
     },
     containerList:{
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row', 
     gap:40, 
+    paddingHorizontal:'2.5%'
     }
 })
 

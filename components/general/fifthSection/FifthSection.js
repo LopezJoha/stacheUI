@@ -7,7 +7,7 @@ import StyledButton from '../StyledButton';
 const FifthSection =()=>{
     return(
         <View style={styles.container}>
-            <View style={styles.textContainer}>
+            <View>
             <HeadingText align='center'
                             size = {SIZES.xxLarge}                        
                             beforeLettering = "Join our awesome community!"/>
@@ -26,21 +26,16 @@ const FifthSection =()=>{
 }
 
 const styles = StyleSheet.create({
-    container:{
-        flex:1,
-        backgroundColor: COLORS.background3, 
+    container:{        
+        backgroundColor: COLORS.footer, 
         flexDirection: 'column', 
-        padding: '2.5%'
-    },
-    textContainer:{
-        paddingVertical:'5%'
-    }, 
-    imageContainer:{
+        paddingVertical:'8%'
         
+    },
+    imageContainer:{        
         justifyContent:'center', 
         alignContent:'center', 
-        borderEndWidth:2, 
-        borderColor:'red'
+        paddingVertical:'5%'
     }, 
     image:{
         alignSelf:'center'

@@ -16,6 +16,7 @@ const COLORS = {
   buttonBackground: '#121212bf',
   buttonBorder: '#666666',
   buttonText: '#8e8e8e',
+  footer:'#1c1c1c',
 
   white: "#FFFFFF",
   lightWhite: "#FAFAFC"  
